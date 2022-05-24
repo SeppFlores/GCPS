@@ -1,0 +1,219 @@
+$fontTitles:  'Ubuntu', sans-serif;
+$fontText: 'Roboto', sans-serif;
+$backgroundColorHTML: #003946;
+$footerColor: #282828;
+$fontColor: #ffffff;
+$fontColorHover: #FC0000;
+$fontColorActive: #00C8D4;
+
+
+@mixin fontDisplayXlarge-mobile {
+	font-size: 2.7rem;
+	line-height: 36px;
+	font-weight: 500;
+}
+
+@mixin fontDisplayLarge-mobile {
+	font-size: 2.4rem;
+	line-height: 28px;
+	font-weight: 500;
+}
+
+@mixin fontDisplayMedium-mobile {
+	font-size: 2.1rem;
+	line-height: 28px;
+	font-weight: 400;
+}
+
+@mixin fontDisplaySmall-mobile {
+	font-size: 1.6rem;
+	line-height: 24px;
+	font-weight: 400;
+}
+
+@mixin fontPageHeading-mobile {
+	font-size: 2.4rem;
+	line-height: 28px;
+	font-weight: 600;
+}
+
+@mixin fontHeading-mobile {
+	font-size: 1.7rem;
+	line-height: 24px;
+	font-weight: 500;
+}
+
+@mixin fontSubheading-mobile {
+	font-size: 1.3rem;
+	line-height: 16px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+@mixin fontButton-mobile {
+	font-size: 1.5rem;
+	line-height: 15px;
+	font-weight: 500;
+}
+
+@mixin fontBody-mobile {
+	font-size: 1.5rem;
+	line-height: 20px;
+	font-weight: 400;
+}
+
+@mixin fontCaption-mobile {
+	font-size: 1.3rem;
+	line-height: 20px;
+	font-weight: 400;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: 'Roboto', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+	background-color: #003946;
+}
+
+.nav{
+	position: static;
+	width: 100%;
+	display: grid;
+	place-items: center;
+	margin: 0 auto;
+	padding: 0 16px;
+	background-color: $backgroundColorHTML;
+	z-index: 1;
+	&__container{
+		display: flex;
+		justify-content: space-evenly;
+		width: 90%;
+		max-width: 1000px;
+		border-top: 0px;
+		border-bottom: 2px solid $fontColor;
+	}
+	&__button{
+		background-color: transparent;
+		border: none;
+	}
+	&__a{
+		width: 91.5px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+	}
+	&__a:hover{
+		cursor: pointer;
+		background-color: $footerColor;
+		color: $fontColorHover;
+		border-bottom: 0px;
+	}
+	&__a:active{
+		cursor: pointer;
+	}
+	&__img{
+		display: none;
+	}
+	&__text{
+		margin-top: 0px;
+		font-family: $fontText;
+		color: $fontColor;
+		@include fontSubheading-mobile;
+	}
+}
+
+.header {
+	width: 100%;
+	max-width: 1000px;
+	&__div{
+		width: 90%;
+		height: 400px;
+	}
+	&__img {
+		width: 380px;
+	}
+	&__title {
+		font-family: $fontTitles;
+		color: $fontColor;
+		text-align: center;
+		@include fontPageHeading-mobile;
+	}
+	&__button{
+		width: 200px;
+		padding: 4px 16px;
+		color: $fontColor;
+		background-color: transparent;
+		border: 2px solid $fontColor;
+		border-radius: 5px;
+		@include fontButton-mobile;
+	}
+	&__a{
+		text-decoration: none;
+		color: $fontColor;
+		@include fontButton-mobile;
+	}
+	&__a:hover{
+		cursor: pointer;
+		color: $fontColorHover;
+	}
+	&__a:active{
+		color: $fontColorActive;
+	}
+}
+
+.clients {
+	padding: 0 0 16px;
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+	&__title{
+		@include fontPageHeading-mobile;
+	}
+	&__grid{
+		width: 90%;
+		max-width: 600px;
+		row-gap: 20px;
+	}
+	&__img{
+		height: 60px;
+	}
+}
+
+.value {
+	width: 100%;
+	max-width: 700px;
+}
+
+.about{
+	width: 100%;
+	max-width: 800px;
+}
+
+.solutions{
+	width: 100%;
+	max-width: 800px;
+}
+
+.testimonial{
+	width: 100%;
+	max-width: 800px;
+}
+
+.contact{
+	margin: 0 auto;
+}
+
+.footer{
+	margin: 0;
+}

@@ -1,0 +1,139 @@
+$fontTitles:  'Ubuntu', sans-serif;
+$fontText: 'Roboto', sans-serif;
+$backgroundColorHTML: #003946;
+$footerColor: #282828;
+$fontColor: #ffffff;
+$fontColorHover: #FC0000;
+$fontColorActive: #00C8D4;
+
+
+@mixin fontDisplayXlarge-mobile {
+	font-size: 2.7rem;
+	line-height: 36px;
+	font-weight: 500;
+}
+
+@mixin fontDisplayLarge-mobile {
+	font-size: 2.4rem;
+	line-height: 28px;
+	font-weight: 500;
+}
+
+@mixin fontDisplayMedium-mobile {
+	font-size: 2.1rem;
+	line-height: 28px;
+	font-weight: 400;
+}
+
+@mixin fontDisplaySmall-mobile {
+	font-size: 1.6rem;
+	line-height: 24px;
+	font-weight: 400;
+}
+
+@mixin fontPageHeading-mobile {
+	font-size: 2.4rem;
+	line-height: 28px;
+	font-weight: 600;
+}
+
+@mixin fontHeading-mobile {
+	font-size: 1.7rem;
+	line-height: 24px;
+	font-weight: 500;
+}
+
+@mixin fontSubheading-mobile {
+	font-size: 1.3rem;
+	line-height: 16px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+@mixin fontButton-mobile {
+	font-size: 1.5rem;
+	line-height: 15px;
+	font-weight: 500;
+}
+
+@mixin fontBody-mobile {
+	font-size: 1.5rem;
+	line-height: 20px;
+	font-weight: 400;
+}
+
+@mixin fontCaption-mobile {
+	font-size: 1.3rem;
+	line-height: 20px;
+	font-weight: 400;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: 'Roboto', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+	background-color: #003946;
+}
+
+.u-wrapper{
+	width: 90%;
+	max-width: 800px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.thanks{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	max-width: 800px;
+	padding: 16px 0;
+	&__title{
+		font-family: $fontTitles;
+		color: $fontColor;
+		text-align: center;
+		text-transform: uppercase;
+		@include fontDisplayXlarge-mobile;
+	}
+	&__figure{
+		width: 100%;
+		max-width: 800px;
+		background-color: $fontColor;
+		border-radius: 10px;
+		margin: 8px 0;
+		padding: 16px;
+	}
+	&__img{
+		width: 100%;
+		height: auto;
+	}
+	&__text{
+		font-family: $fontTitles;
+		color: $fontColor;
+		text-align: center;
+		@include fontDisplaySmall-mobile;
+	}
+	&__a{
+		margin-top: 8px;
+		align-self: flex-end;
+		font-family: $fontText;
+		color: $fontColor;
+		text-align: center;
+		@include fontButton-mobile;
+	}
+	&__a:hover{
+		color: $fontColorHover;
+	}
+
+}

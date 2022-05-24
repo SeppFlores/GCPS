@@ -1,0 +1,271 @@
+$fontTitles:  'Ubuntu', sans-serif;
+$fontText: 'Roboto', sans-serif;
+$backgroundColorHTML: #003946;
+$footerColor: #282828;
+$fontColor: #ffffff;
+$fontColorHover: #FC0000;
+$fontColorActive: #00C8D4;
+
+
+@mixin fontDisplayXlarge-mobile {
+	font-size: 2.7rem;
+	line-height: 36px;
+	font-weight: 500;
+}
+
+@mixin fontDisplayLarge-mobile {
+	font-size: 2.4rem;
+	line-height: 28px;
+	font-weight: 500;
+}
+
+@mixin fontDisplayMedium-mobile {
+	font-size: 2.1rem;
+	line-height: 28px;
+	font-weight: 400;
+}
+
+@mixin fontDisplaySmall-mobile {
+	font-size: 1.6rem;
+	line-height: 24px;
+	font-weight: 400;
+}
+
+@mixin fontPageHeading-mobile {
+	font-size: 2.4rem;
+	line-height: 28px;
+	font-weight: 600;
+}
+
+@mixin fontHeading-mobile {
+	font-size: 1.7rem;
+	line-height: 24px;
+	font-weight: 500;
+}
+
+@mixin fontSubheading-mobile {
+	font-size: 1.3rem;
+	line-height: 16px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+@mixin fontButton-mobile {
+	font-size: 1.5rem;
+	line-height: 15px;
+	font-weight: 500;
+}
+
+@mixin fontBody-mobile {
+	font-size: 1.5rem;
+	line-height: 20px;
+	font-weight: 400;
+}
+
+@mixin fontCaption-mobile {
+	font-size: 1.3rem;
+	line-height: 20px;
+	font-weight: 400;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: 'Roboto', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+	background-color: #003946;
+}
+
+.nav{
+	&__container{
+		max-width: 600px;
+	}
+	&__button{
+		background-color: transparent;
+		border: none;
+	}
+	&__img{
+		font-size: 20px;
+		color: $fontColor;
+	}
+}
+
+.header {
+	width: 100%;
+	max-width: 600px;
+	&__title{
+		@include fontPageHeading-mobile;
+	}
+}
+
+.clients {
+	padding: 0 0 16px;
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+	&__title{
+		@include fontPageHeading-mobile;
+	}
+	&__grid{
+		width: 90%;
+		max-width: 350px;
+		row-gap: 20px;
+	}
+	&__img{
+		height: 35px;
+	}
+}
+
+.value {
+	width: 100%;
+	max-width: 600px;
+	&__title{
+		@include fontPageHeading-mobile;
+	}
+	&__container{
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		width: 100%;
+	}
+	&__left{
+		width: 50%;
+		padding: 0 16px;
+	}
+	&__right{
+		width: 50%;
+		padding: 0 16px;
+	}
+}
+
+.about{
+	width: 100%;
+	max-width: 600px;
+	&__title{
+		@include fontPageHeading-mobile;
+	}
+	&__container{
+		display: flex;
+	}
+	&__subtitle{
+		@include fontHeading-mobile;
+	}
+	&__right{
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	&__left{
+		width: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		order: -1;
+	}
+}
+
+.solutions{
+	width: 100%;
+	max-width: 600px;
+	&__title{
+		@include fontPageHeading-mobile;
+	}
+	&__element{
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
+	&__side{
+		width: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	&__text{
+		width: 70%;
+		margin: 0 auto;
+		@include fontHeading-mobile;
+		
+	}
+	&__figure{
+		width: 50%;
+	}
+	&__figure--first{
+		order: -1;
+	}
+}
+
+.testimonial{
+	width: 100%;
+	max-width: 600px;
+	&__title{
+		@include fontPageHeading-mobile;
+	}
+	&__container{
+		display: flex;
+		justify-content: center;
+	}
+	&__element{
+		width: 33.33%;
+	}
+	&__element:nth-child(2){
+		padding: 0 16px;
+	}
+}
+
+.contact{
+	width: 100%;
+	max-width: 400px;
+	&__title{
+		@include fontPageHeading-mobile;
+	}
+}
+
+.footer{
+	padding: 16px 0 16px;
+	margin: 0 0 90px;
+	width: 100%;
+	background-color: $footerColor;
+	&__container{
+		width: 90%;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	&__a{
+		text-decoration: none;
+		font-family: $fontText;
+		color: $fontColor;
+		padding: 8px 0;
+		@include fontBody-mobile;
+	}
+	&__a:hover{
+		cursor: pointer;
+		color: $fontColorHover;
+	}
+	&__a:nth-child(2){
+		padding: 0;
+	}
+	&__a:nth-child(3){
+		font-family: $fontText;
+		color: #979797;
+		@include fontCaption-mobile;
+	}
+	&__a:nth-child(3):hover{
+		color: $fontColorHover;
+	}
+}

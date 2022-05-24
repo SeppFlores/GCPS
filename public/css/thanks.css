@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  background-color: #003946;
+}
+
+.u-wrapper {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.thanks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 800px;
+  padding: 16px 0;
+}
+.thanks__title {
+  font-family: "Ubuntu", sans-serif;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2.7rem;
+  line-height: 36px;
+  font-weight: 500;
+}
+.thanks__figure {
+  width: 100%;
+  max-width: 800px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin: 8px 0;
+  padding: 16px;
+}
+.thanks__img {
+  width: 100%;
+  height: auto;
+}
+.thanks__text {
+  font-family: "Ubuntu", sans-serif;
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 24px;
+  font-weight: 400;
+}
+.thanks__a {
+  margin-top: 8px;
+  align-self: flex-end;
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 15px;
+  font-weight: 500;
+}
+.thanks__a:hover {
+  color: #FC0000;
+}
+
+/*# sourceMappingURL=thanks.css.map */

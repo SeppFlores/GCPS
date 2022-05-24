@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  background-color: #003946;
+}
+
+.nav {
+  position: static;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  margin: 0 auto;
+  padding: 0 16px;
+  background-color: #003946;
+  z-index: 1;
+}
+.nav__container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 90%;
+  max-width: 1000px;
+  border-top: 0px;
+  border-bottom: 2px solid #ffffff;
+}
+.nav__button {
+  background-color: transparent;
+  border: none;
+}
+.nav__a {
+  width: 91.5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.nav__a:hover {
+  cursor: pointer;
+  background-color: #282828;
+  color: #FC0000;
+  border-bottom: 0px;
+}
+.nav__a:active {
+  cursor: pointer;
+}
+.nav__img {
+  display: none;
+}
+.nav__text {
+  margin-top: 0px;
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  font-size: 1.3rem;
+  line-height: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.header {
+  width: 100%;
+  max-width: 1000px;
+}
+.header__div {
+  width: 90%;
+  height: 400px;
+}
+.header__img {
+  width: 380px;
+}
+.header__title {
+  font-family: "Ubuntu", sans-serif;
+  color: #ffffff;
+  text-align: center;
+  font-size: 2.4rem;
+  line-height: 28px;
+  font-weight: 600;
+}
+.header__button {
+  width: 200px;
+  padding: 4px 16px;
+  color: #ffffff;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  line-height: 15px;
+  font-weight: 500;
+}
+.header__a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  line-height: 15px;
+  font-weight: 500;
+}
+.header__a:hover {
+  cursor: pointer;
+  color: #FC0000;
+}
+.header__a:active {
+  color: #00C8D4;
+}
+
+.clients {
+  padding: 0 0 16px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.clients__title {
+  font-size: 2.4rem;
+  line-height: 28px;
+  font-weight: 600;
+}
+.clients__grid {
+  width: 90%;
+  max-width: 600px;
+  row-gap: 20px;
+}
+.clients__img {
+  height: 60px;
+}
+
+.value {
+  width: 100%;
+  max-width: 700px;
+}
+
+.about {
+  width: 100%;
+  max-width: 800px;
+}
+
+.solutions {
+  width: 100%;
+  max-width: 800px;
+}
+
+.testimonial {
+  width: 100%;
+  max-width: 800px;
+}
+
+.contact {
+  margin: 0 auto;
+}
+
+.footer {
+  margin: 0;
+}
+
+/*# sourceMappingURL=desktop.css.map */

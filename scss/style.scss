@@ -1,0 +1,424 @@
+$fontTitles:  'Ubuntu', sans-serif;
+$fontText: 'Roboto', sans-serif;
+$backgroundColorHTML: #003946;
+$footerColor: #282828;
+$fontColor: #ffffff;
+$fontColorHover: #FC0000;
+$fontColorActive: #00C8D4;
+
+
+@mixin fontDisplayXlarge-mobile {
+	font-size: 2.7rem;
+	line-height: 36px;
+	font-weight: 500;
+}
+
+@mixin fontDisplayLarge-mobile {
+	font-size: 2.4rem;
+	line-height: 28px;
+	font-weight: 500;
+}
+
+@mixin fontDisplayMedium-mobile {
+	font-size: 2.1rem;
+	line-height: 28px;
+	font-weight: 400;
+}
+
+@mixin fontDisplaySmall-mobile {
+	font-size: 1.6rem;
+	line-height: 24px;
+	font-weight: 400;
+}
+
+@mixin fontPageHeading-mobile {
+	font-size: 2.4rem;
+	line-height: 28px;
+	font-weight: 600;
+}
+
+@mixin fontHeading-mobile {
+	font-size: 1.7rem;
+	line-height: 24px;
+	font-weight: 500;
+}
+
+@mixin fontSubheading-mobile {
+	font-size: 1.3rem;
+	line-height: 16px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+@mixin fontButton-mobile {
+	font-size: 1.5rem;
+	line-height: 15px;
+	font-weight: 500;
+}
+
+@mixin fontBody-mobile {
+	font-size: 1.5rem;
+	line-height: 20px;
+	font-weight: 400;
+}
+
+@mixin fontCaption-mobile {
+	font-size: 1.3rem;
+	line-height: 20px;
+	font-weight: 400;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: 'Roboto', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: #003946;
+}
+
+.nav{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	padding: 16px 0 0;
+	margin: 0 auto;
+	background-color: $backgroundColorHTML;
+	z-index: 1;
+	&__container{
+		width: 90%;
+		display: flex;
+		justify-content: space-between;
+		margin: 0 auto;
+		padding: 0;
+		border-top: 2px solid $fontColor;
+	}
+	&__button{
+		background-color: transparent;
+		border: none;
+	}
+	&__a{
+		padding: 16px 8px;
+		border-radius: 8px 8px 0 0;
+		font-family: $fontText;
+		color: $fontColor;
+		@include fontCaption-mobile;
+		width: 91.5px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+	}
+	&__a:hover{
+		cursor: pointer;
+		background-color: $footerColor;
+		border-bottom: 2px solid $fontColorHover;
+	}
+	&__img{
+		order: -1;
+		font-size: 20px;
+		color: $fontColor;
+	}
+	&__text{
+		margin-top: 8px;
+		font-family: $fontText;
+		color: $fontColor;
+		@include fontCaption-mobile;
+	}
+}
+
+.u-wrapper{
+	width: 90%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.header {
+	width: 100%;
+	display: grid;
+	place-items: center;
+	padding: 16px 0;
+	margin: 0 auto;
+	&__div{
+		width: 100%;
+		height: 300px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		padding: 50px 20px;
+		background-image: url('../img/headerBackground.jpg');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		border-radius: 10px;
+	}
+	&__img {
+		width: 240px;
+	}
+	&__title {
+		font-family: $fontTitles;
+		color: $fontColor;
+		text-align: center;
+		@include fontHeading-mobile;
+	}
+	&__button{
+		width: 125px;
+		padding: 4px 16px;
+		color: $fontColor;
+		background-color: transparent;
+		border: 2px solid $fontColor;
+		border-radius: 5px;
+		@include fontButton-mobile;
+	}
+	&__a{
+		text-decoration: none;
+		color: $fontColor;
+		@include fontButton-mobile;
+	}
+	&__a:hover{
+		cursor: pointer;
+		color: $fontColorHover;
+	}
+	&__a:active{
+		color: $fontColorActive;
+	}
+}
+
+.clients {
+	padding: 0 0px 16px;
+	width: 100%;
+	&__title{
+		width: 100%;
+		font-family: $fontTitles;
+		color: $fontColor;
+		text-align: center;
+		@include fontHeading-mobile;
+	}
+	&__grid{
+		width: 100%;
+		margin: 16px auto 0;
+		display: grid;
+		place-items: center;
+		grid-template-columns: repeat(3, auto);
+		grid-template-rows: repeat(3, auto);
+		row-gap: 10px;
+		column-gap: 4px;
+	}
+	&__img{
+		height: 28px;
+	}
+}
+
+.value {
+	padding: 0 0 16px;
+	width: 100%;
+	margin: 0 auto;
+	&__title{
+		font-family: $fontTitles;
+		color: $fontColor;
+		text-align: center;
+		@include fontHeading-mobile;
+	}
+	&__element{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin: 16px 0 0;
+	}
+	&__img{
+		width: 32px;
+		height: 32px;
+	}
+	&__text{
+		margin-top: 8px;
+		font-family: $fontText;
+		color: $fontColor;
+		text-align: center;
+		@include fontBody-mobile;
+	}
+}
+
+.about{
+	padding: 0 0 16px;
+	width: 100%;
+	margin: 0 auto;
+	&__title{
+		margin-bottom: 8px;
+		font-family: $fontTitles;
+		color: $fontColor;
+		text-align: center;
+		@include fontHeading-mobile;
+	}
+	&__text{
+		margin-bottom: 8px;
+		font-family: $fontText;
+		color: $fontColor;
+		text-align: center;
+		@include fontBody-mobile;
+	}
+	&__figure{
+		margin-top: 16px;
+		display: grid;
+		place-items: center;
+	}
+	&__img{
+		width: 70%;
+		height: auto;
+		border-radius: 10px;
+	}
+	&__mission{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	&__vision{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	&__subtitle{
+		margin-bottom: 8px;
+		font-family: $fontTitles;
+		color: $fontColor;
+		text-align: center;
+		@include fontSubheading-mobile;
+	}
+}
+
+.solutions{
+	padding: 0 0 16px;
+	width: 100%;
+	margin: 0 auto;
+	&__title{
+		margin-bottom: 8px;
+		font-family: $fontTitles;
+		color: $fontColor;
+		text-align: center;
+		@include fontHeading-mobile;
+	}
+	&__element{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding-bottom: 16px;
+	}
+	&__side{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	&__text{
+		width: 70%;
+		font-family: $fontText;
+		color: $fontColor;
+		text-align: center;
+		margin-bottom: 8px;
+		@include fontBody-mobile;
+	}
+	&__figure{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	&__img{
+		width: 70%;
+		height: auto;
+		border-radius: 10px;
+	}
+}
+
+.testimonial{
+	padding: 0 0 16px;
+	width: 100%;
+	margin: 0 auto;
+	&__title{
+		margin-bottom: 8px;
+		font-family: $fontTitles;
+		color: $fontColor;
+		text-align: center;
+		@include fontHeading-mobile;
+	}
+	&__element{
+		display: flex;
+		flex-direction: column;
+	}
+	&__p{
+		font-family: $fontText;
+		color: $fontColor;
+		text-align: left;
+		margin-bottom: 8px;
+		@include fontBody-mobile;
+	}
+	&__client{
+		font-family: $fontText;
+		color: $fontColor;
+		text-align: right;
+		margin-bottom: 16px;
+		@include fontBody-mobile;
+		font-weight: 700;
+	}
+}
+
+.contact{
+	padding: 0 0 16px;
+	width: 100%;
+	margin: 0 auto 90px;
+	&__title{
+		margin-bottom: 8px;
+		font-family: $fontTitles;
+		color: $fontColor;
+		text-align: center;
+		@include fontHeading-mobile;
+	}
+}
+
+.footer{
+	padding: 16px 0 16px;
+	margin: 0 0 90px;
+	width: 100%;
+	background-color: $footerColor;
+	&__container{
+		width: 90%;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	&__a{
+		text-decoration: none;
+		font-family: $fontText;
+		color: $fontColor;
+		padding: 8px 0;
+		@include fontBody-mobile;
+	}
+	&__a:hover{
+		cursor: pointer;
+		color: $fontColorHover;
+	}
+	&__a:nth-child(2){
+		padding: 0;
+	}
+	&__a:nth-child(3){
+		font-family: $fontText;
+		color: #979797;
+		@include fontCaption-mobile;
+	}
+	&__a:nth-child(3):hover{
+		color: $fontColorHover;
+	}
+}
